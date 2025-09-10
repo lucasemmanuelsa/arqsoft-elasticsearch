@@ -1,0 +1,5 @@
+# Arquivos de configuração
+*.env
+*.json
+*.ini
+*.log
