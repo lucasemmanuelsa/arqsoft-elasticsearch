@@ -1,9 +1,9 @@
-from constants import INDEX_NAME
+from constants import ES_HOST, INDEX_NAME
 from elasticsearch import Elasticsearch
 import nltk
 
 def more_like_this_search(user_query, stopwords, size=10):
-    es = Elasticsearch("http://localhost:9200")
+    es = Elasticsearch(ES_HOST)
 
     full_query = {
         "size": size,  # define aqui

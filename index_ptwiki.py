@@ -2,6 +2,7 @@ from tqdm import tqdm
 import json
 from elasticsearch import Elasticsearch, helpers
 from elasticsearch.helpers import BulkIndexError
+from constants import INDEX_NAME, ES_HOST
 
 
 def load_wikipedia(jsonl_path, MAX_LEN_ARTIGOS=None):
@@ -32,8 +33,6 @@ def load_wikipedia(jsonl_path, MAX_LEN_ARTIGOS=None):
 
 
 # Use HTTP em vez de HTTPS
-ES_HOST = "http://localhost:9200"
-INDEX_NAME = "ptwiki"
 
 def create_es_client():
     """Cria cliente Elasticsearch sem SSL"""
