@@ -33,6 +33,15 @@ def insert_article(title, text):
     INSERT INTO artigos (title, text) VALUES (%s, %s)
     """, (title, text))
     conn.commit()
+def create_table():
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS artigos (
+            id SERIAL PRIMARY KEY,
+            title TEXT,
+            text TEXT
+        );
+    """)
+    conn.commit()
 
 def insert_articles_from_wikipedia(jsonl_path, MAX_LEN_ARTIGOS=None):
     artigos = load_wikipedia(jsonl_path, MAX_LEN_ARTIGOS)
@@ -43,15 +52,8 @@ def apagar_todos_os_artigos():
     """Apaga todos os artigos da tabela artigos."""
     cur.execute("DELETE FROM artigos;")
     conn.commit()
-def create_table_and_adapt_table_to_fulltextsearch():
+def adapt_table_to_fulltextsearch():
     """Cria a tabela artigos e adapta para busca full-text."""
-    cur.execute("""
-        CREATE TABLE IF NOT EXISTS artigos (
-            id SERIAL PRIMARY KEY,
-            title TEXT,
-            text TEXT
-        );
-    """)
     cur.execute("ALTER TABLE artigos ADD COLUMN IF NOT EXISTS tsv TSVECTOR;")
     cur.execute("UPDATE artigos SET tsv = to_tsvector('portuguese', coalesce(title,'') || ' ' || coalesce(text,''));")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_fts ON artigos USING GIN(tsv);")
@@ -66,6 +68,14 @@ conn = psycopg2.connect(
 )
 
 cur = conn.cursor()
+
+#Caso precise criar a tabela e adaptar para full-text search novamente basta executar os códigos abaixo
+#create_table()
+#insert_articles_from_wikipedia("ptwiki-latest.json")
+#adapt_table_to_fulltextsearch()
+
+#Caso precise apagar todos os artigos da tabela, descomente a linha abaixo
+#apagar_todos_os_artigos()
 
 while True:
     searchElement = input("Digite o termo de busca: ")
