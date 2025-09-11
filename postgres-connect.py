@@ -39,8 +39,19 @@ def insert_articles_from_wikipedia(jsonl_path, MAX_LEN_ARTIGOS=None):
     for artigo in artigos:
         insert_article(artigo["title"], artigo["text"])
     print("Todos os artigos foram inseridos na tabela.")
-
-def adapt_table_to_fulltextsearch():
+def apagar_todos_os_artigos():
+    """Apaga todos os artigos da tabela artigos."""
+    cur.execute("DELETE FROM artigos;")
+    conn.commit()
+def create_table_and_adapt_table_to_fulltextsearch():
+    """Cria a tabela artigos e adapta para busca full-text."""
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS artigos (
+            id SERIAL PRIMARY KEY,
+            title TEXT,
+            text TEXT
+        );
+    """)
     cur.execute("ALTER TABLE artigos ADD COLUMN IF NOT EXISTS tsv TSVECTOR;")
     cur.execute("UPDATE artigos SET tsv = to_tsvector('portuguese', coalesce(title,'') || ' ' || coalesce(text,''));")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_fts ON artigos USING GIN(tsv);")
@@ -55,19 +66,6 @@ conn = psycopg2.connect(
 )
 
 cur = conn.cursor()
-# Criação da tabela
-cur.execute("""
-    CREATE TABLE IF NOT EXISTS artigos (
-        id SERIAL PRIMARY KEY,
-        title TEXT,
-        text TEXT
-    );
-    """)
-conn.commit()
-
-adapt_table_to_fulltextsearch()
-
-insert_articles_from_wikipedia("ptwiki-latest.json", MAX_LEN_ARTIGOS=100) #aumentar o número para inserir mais artigos,ou retirar max len para rodar tudo
 
 while True:
     searchElement = input("Digite o termo de busca: ")
@@ -75,11 +73,18 @@ while True:
         break
     # Transforma a string em formato AND para to_tsquery
     tsquery = ' & '.join(searchElement.strip().split())
-    cur.execute("SELECT * FROM artigos WHERE tsv @@ to_tsquery('portuguese', %s);", (tsquery,))
+    cur.execute("""
+        SELECT *, ts_rank(tsv, to_tsquery('portuguese', %s)) AS rank
+        FROM artigos
+        WHERE tsv @@ to_tsquery('portuguese', %s)
+        ORDER BY rank DESC
+        LIMIT 20;
+    """, (tsquery, tsquery))
     rows = cur.fetchall()
-    for r in rows[:20]:
-        print(r[2][:50])  # Print first 50 characters of the text
-        print('\n')
+    for r in rows:
+        print("Título:", r[1])
+        print("Trecho:", r[2][:300], "...\n")
+        print("Relevância:", r[-1], "\n")
 
 cur.close()
 conn.close()
