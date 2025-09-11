@@ -40,6 +40,11 @@ def insert_articles_from_wikipedia(jsonl_path, MAX_LEN_ARTIGOS=None):
         insert_article(artigo["title"], artigo["text"])
     print("Todos os artigos foram inseridos na tabela.")
 
+def adapt_table_to_fulltextsearch():
+    cur.execute("ALTER TABLE artigos ADD COLUMN IF NOT EXISTS tsv TSVECTOR;")
+    cur.execute("UPDATE artigos SET tsv = to_tsvector('portuguese', coalesce(title,'') || ' ' || coalesce(text,''));")
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_fts ON artigos USING GIN(tsv);")
+    conn.commit()
 # Dados de conexão
 conn = psycopg2.connect(
     host="localhost",      # ou o nome do serviço no docker-compose se estiver em outra rede
@@ -60,14 +65,21 @@ cur.execute("""
     """)
 conn.commit()
 
+adapt_table_to_fulltextsearch()
+
 insert_articles_from_wikipedia("ptwiki-latest.json", MAX_LEN_ARTIGOS=100) #aumentar o número para inserir mais artigos,ou retirar max len para rodar tudo
 
-
-# Consultar dados
-cur.execute("SELECT * FROM artigos;")
-rows = cur.fetchall()
-for r in rows:
-    print(r)
+while True:
+    searchElement = input("Digite o termo de busca: ")
+    if searchElement.lower() == ':sair':
+        break
+    # Transforma a string em formato AND para to_tsquery
+    tsquery = ' & '.join(searchElement.strip().split())
+    cur.execute("SELECT * FROM artigos WHERE tsv @@ to_tsquery('portuguese', %s);", (tsquery,))
+    rows = cur.fetchall()
+    for r in rows[:20]:
+        print(r[2][:50])  # Print first 50 characters of the text
+        print('\n')
 
 cur.close()
 conn.close()
