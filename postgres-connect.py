@@ -1,6 +1,7 @@
 import psycopg2
 from tqdm import tqdm
 import json
+import time
 
 def load_wikipedia(jsonl_path, MAX_LEN_ARTIGOS=None):
     data = []
@@ -82,7 +83,9 @@ while True:
     if searchElement.lower() == ':sair':
         break
     # Transforma a string em formato AND para to_tsquery
+    
     tsquery = ' & '.join(searchElement.strip().split())
+    start_time = time.time()
     cur.execute("""
         SELECT *, ts_rank(tsv, to_tsquery('portuguese', %s)) AS rank
         FROM artigos
@@ -91,10 +94,16 @@ while True:
         LIMIT 20;
     """, (tsquery, tsquery))
     rows = cur.fetchall()
+    end_time = time.time()
+    response_time = end_time - start_time
+    relevant_answers = [r for r in rows if r[-1] > 0.8]
     for r in rows:
         print("Título:", r[1])
         print("Trecho:", r[2][:300], "...\n")
         print("Relevância:", r[-1], "\n")
+        
+    print("Precisão da pesquisa (>0.8):", len(relevant_answers)/len(rows) if rows else 0)
+    print(f"Tempo de resposta: {response_time:.4f} segundos\n")
 
 cur.close()
 conn.close()
