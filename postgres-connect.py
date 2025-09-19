@@ -2,6 +2,14 @@ import psycopg2
 from tqdm import tqdm
 import json
 import time
+from fastapi import FastAPI
+import uvicorn
+from pydantic import BaseModel
+    
+app = FastAPI()
+
+class SearchRequest(BaseModel):
+    searchElement: str
 
 def load_wikipedia(jsonl_path, MAX_LEN_ARTIGOS=None):
     data = []
@@ -28,7 +36,6 @@ def load_wikipedia(jsonl_path, MAX_LEN_ARTIGOS=None):
 
     print(f"Total de artigos: {len(data)}")
     return data
-
 def insert_article(title, text):
     cur.execute("""
     INSERT INTO artigos (title, text) VALUES (%s, %s)
@@ -43,7 +50,6 @@ def create_table():
         );
     """)
     conn.commit()
-
 def insert_articles_from_wikipedia(jsonl_path, MAX_LEN_ARTIGOS=None):
     artigos = load_wikipedia(jsonl_path, MAX_LEN_ARTIGOS)
     for artigo in artigos:
@@ -59,32 +65,22 @@ def adapt_table_to_fulltextsearch():
     cur.execute("UPDATE artigos SET tsv = to_tsvector('portuguese', coalesce(title,'') || ' ' || coalesce(text,''));")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_fts ON artigos USING GIN(tsv);")
     conn.commit()
-# Dados de conexão
-conn = psycopg2.connect(
-    host="localhost",      # ou o nome do serviço no docker-compose se estiver em outra rede
-    port=5432,
-    database="arqsoft",
-    user="user",
-    password="password"
-)
+def start_connection():
+    global conn, cur
+    conn = psycopg2.connect(
+        host="localhost",      # ou o nome do serviço no docker-compose se estiver em outra rede
+        port=5432,
+        database="arqsoft",
+        user="user",
+        password="password"
+    )
+    cur = conn.cursor()
 
-cur = conn.cursor()
 
-#Caso precise criar a tabela e adaptar para full-text search novamente basta executar os códigos abaixo
-#create_table()
-#insert_articles_from_wikipedia("ptwiki-latest.json")
-#adapt_table_to_fulltextsearch()
-
-#Caso precise apagar todos os artigos da tabela, descomente a linha abaixo
-#apagar_todos_os_artigos()
-
-while True:
-    searchElement = input("Digite o termo de busca: ")
-    if searchElement.lower() == ':sair':
-        break
-    # Transforma a string em formato AND para to_tsquery
-    
-    tsquery = ' & '.join(searchElement.strip().split())
+@app.post("/buscar-postgres")
+def buscarPostgres(searchRequest: SearchRequest):
+    stringRetorno = ""
+    tsquery = ' & '.join(searchRequest.searchElement.strip().split())
     start_time = time.time()
     cur.execute("""
         SELECT *, ts_rank(tsv, to_tsquery('portuguese', %s)) AS rank
@@ -99,11 +95,30 @@ while True:
     relevant_answers = [r for r in rows if r[-1] > 0.8]
     for r in rows:
         print("Título:", r[1])
+        stringRetorno += "Título: " + r[1] + "\n"
         print("Trecho:", r[2][:300], "...\n")
+        stringRetorno += "Trecho: " + r[2][:300] + "...\n"
         print("Relevância:", r[-1], "\n")
+        stringRetorno += "Relevância: " + str(r[-1]) + "\n\n"
         
     print("Precisão da pesquisa (>0.8):", len(relevant_answers)/len(rows) if rows else 0)
+    stringRetorno += "Precisão da pesquisa (>0.8): " + str(len(relevant_answers)/len(rows) if rows else 0) + "\n"
     print(f"Tempo de resposta: {response_time:.4f} segundos\n")
+    stringRetorno += f"Tempo de resposta: {response_time:.4f} segundos\n"
+    return stringRetorno
 
-cur.close()
-conn.close()
+
+
+@app.get("/baixar-dependencias")
+def baixar_dependencias():
+    #Caso precise criar a tabela e adaptar para full-text search novamente basta executar a função
+    create_table()
+    insert_articles_from_wikipedia("ptwiki-latest.json")
+    adapt_table_to_fulltextsearch()
+
+
+if __name__ == "__main__":
+    start_connection()
+    uvicorn.run(app, host="127.0.0.1", port=8000)
+    cur.close()
+    conn.close()
