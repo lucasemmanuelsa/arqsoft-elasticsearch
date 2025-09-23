@@ -2,6 +2,7 @@ from tqdm import tqdm
 import json
 from elasticsearch import Elasticsearch, helpers
 from elasticsearch.helpers import BulkIndexError
+from constants import INDEX_NAME, ES_HOST
 
 
 def load_wikipedia(jsonl_path, MAX_LEN_ARTIGOS=None):
@@ -32,8 +33,6 @@ def load_wikipedia(jsonl_path, MAX_LEN_ARTIGOS=None):
 
 
 # Use HTTP em vez de HTTPS
-ES_HOST = "http://localhost:9200"
-INDEX_NAME = "ptwiki"
 
 def create_es_client():
     """Cria cliente Elasticsearch sem SSL"""
@@ -61,7 +60,7 @@ def create_index(es):
                     "mappings": {
                         "properties": {
                             "title": {"type": "text"},
-                            "text": {"type": "text"}
+                            "text": {"type": "text"},
                         }
                     }
                 }
@@ -69,6 +68,8 @@ def create_index(es):
             print("Índice criado com sucesso!")
         else:
             print("Índice já existe, pulando criação.")
+            #es.indices.delete(index=INDEX_NAME)
+            #print("índice deletado com sucesso!")
             
     except Exception as e:
         print("Erro ao checar/criar índice:", e)
@@ -79,11 +80,12 @@ def generate_actions(json_path):
     for i, artigo in enumerate(artigos):
         if i % 1000 == 0:
             print(f"Processando artigo {i}...")
+        
         yield {
             "_index": INDEX_NAME,
             "_id": artigo["title"],
             "title": artigo["title"],
-            "text": artigo["text"]
+            "text": artigo["text"],
         }
 
 def main():

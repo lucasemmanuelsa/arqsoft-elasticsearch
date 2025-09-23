@@ -2,11 +2,10 @@ import os
 import re
 import time
 from elasticsearch import Elasticsearch
-
-INDEX_NAME = "ptwiki" 
+from constants import INDEX_NAME, ES_HOST
 
 def search_articles(query, size=10):
-    es = Elasticsearch("http://localhost:9200")
+    es = Elasticsearch(ES_HOST)
     response = es.search(
         index=INDEX_NAME,
         body={

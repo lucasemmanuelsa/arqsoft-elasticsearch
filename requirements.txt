@@ -1,5 +1,9 @@
-fastapi
-uvicorn
 elasticsearch==8.14.0
+nltk
+sentence-transformers>=2.2.2
+transformers
+tiktoken
+uvicorn
+fastapi
 tqdm==4.65.0
 psycopg2==2.9.9
