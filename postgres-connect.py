@@ -1,3 +1,5 @@
+import os
+import re
 import psycopg2
 from tqdm import tqdm
 import json
@@ -79,6 +81,13 @@ def start_connection():
 
 @app.post("/buscar-postgres")
 def buscarPostgres(searchRequest: SearchRequest):
+    logs_dir = "postgres-search"
+    os.makedirs(logs_dir, exist_ok=True)
+    # Limpa a query para ser um nome de subpasta válido
+    safe_query = re.sub(r'[^a-zA-Z0-9_\-]', '_', searchRequest.searchElement.strip())[:100]
+    query_dir = os.path.join(logs_dir, safe_query)
+    os.makedirs(query_dir, exist_ok=True)
+
     stringRetorno = ""
     tsquery = ' & '.join(searchRequest.searchElement.strip().split())
     start_time = time.time()
@@ -87,24 +96,28 @@ def buscarPostgres(searchRequest: SearchRequest):
         FROM artigos
         WHERE tsv @@ to_tsquery('portuguese', %s)
         ORDER BY rank DESC
-        LIMIT 20;
+        LIMIT 5;
     """, (tsquery, tsquery))
     rows = cur.fetchall()
     end_time = time.time()
     response_time = end_time - start_time
     relevant_answers = [r for r in rows if r[-1] > 0.8]
-    for r in rows:
+
+    for idx, r in enumerate(rows, 1):
         print("Título:", r[1])
-        stringRetorno += "Título: " + r[1] + "\n"
         print("Trecho:", r[2][:300], "...\n")
-        stringRetorno += "Trecho: " + r[2][:300] + "...\n"
         print("Relevância:", r[-1], "\n")
-        stringRetorno += "Relevância: " + str(r[-1]) + "\n\n"
-        
+        artigo_str = f"Título: {r[1]}\nTrecho: {r[2]}...\nRelevância: {r[-1]}\n"
+        artigo_path = os.path.join(query_dir, f"artigo{idx}.txt")
+        with open(artigo_path, "w", encoding="utf-8") as f:
+            f.write(artigo_str)
+        stringRetorno += artigo_str + "\n"
+
     print("Precisão da pesquisa (>0.8):", len(relevant_answers)/len(rows) if rows else 0)
     stringRetorno += "Precisão da pesquisa (>0.8): " + str(len(relevant_answers)/len(rows) if rows else 0) + "\n"
     print(f"Tempo de resposta: {response_time:.4f} segundos\n")
     stringRetorno += f"Tempo de resposta: {response_time:.4f} segundos\n"
+    
     return stringRetorno
 
 
