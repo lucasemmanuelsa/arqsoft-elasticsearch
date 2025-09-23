@@ -8,8 +8,8 @@ def fuzzy_search(user_query, size=10):
         "query": {
              "bool": {
                 "should": [
-                    {"match": {"title": {"query": "texto", "fuzziness": "AUTO"}}},
-                    {"match": {"text": {"query": "texto", "fuzziness": "AUTO", "boost": 2}}}
+                    {"match": {"title": {"query":user_query, "fuzziness": "AUTO"}}},
+                    {"match": {"text": {"query":user_query, "fuzziness": "AUTO", "boost": 2}}}
                 ]
                 }
         }
