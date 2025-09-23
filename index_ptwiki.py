@@ -3,14 +3,9 @@ import json
 from elasticsearch import Elasticsearch, helpers
 from elasticsearch.helpers import BulkIndexError
 from constants import INDEX_NAME, ES_HOST
-from transformers import pipeline
-from sentence_transformers import SentenceTransformer
 
 
-summarizer_model = pipeline("summarization", model="google/mt5-small")
-embedding_model = SentenceTransformer("intfloat/multilingual-e5-base")
-
-def load_wikipedia(jsonl_path, MAX_LENppsARTIGOS=None):
+def load_wikipedia(jsonl_path, MAX_LEN_ARTIGOS=None):
     data = []
     print("Carregando e formatando dados...")
     with open(jsonl_path, "r", encoding="utf-8") as f:
@@ -66,12 +61,6 @@ def create_index(es):
                         "properties": {
                             "title": {"type": "text"},
                             "text": {"type": "text"},
-                            "summary_text_embedding":{
-                                "type": "dense_vector",
-                                "dims": 768,       
-                                "index": True,
-                                "similarity": "cosine"
-                            }
                         }
                     }
                 }
@@ -79,8 +68,8 @@ def create_index(es):
             print("Índice criado com sucesso!")
         else:
             print("Índice já existe, pulando criação.")
-            es.indices.delete(index=INDEX_NAME)
-            print("índice deletado com sucesso!")
+            #es.indices.delete(index=INDEX_NAME)
+            #print("índice deletado com sucesso!")
             
     except Exception as e:
         print("Erro ao checar/criar índice:", e)
@@ -92,16 +81,11 @@ def generate_actions(json_path):
         if i % 1000 == 0:
             print(f"Processando artigo {i}...")
         
-        summarized_text = summarizer_model(artigo["text"], max_length=400, min_length=30, do_sample=False)[0]["summary_text"]
-        text_embedding =  embedding_model.encode(summarized_text, convert_to_numpy=True)
-
         yield {
             "_index": INDEX_NAME,
             "_id": artigo["title"],
             "title": artigo["title"],
             "text": artigo["text"],
-            "summary_text_embedding":text_embedding
-            
         }
 
 def main():
