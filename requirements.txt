@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 elasticsearch==8.14.0
 tqdm==4.65.0
 nltk
@@ -6,3 +7,10 @@ transformers
 tiktoken
 uvicorn
 fastapi
+=======
+fastapi
+uvicorn
+elasticsearch==8.14.0
+tqdm==4.65.0
+psycopg2==2.9.9
+>>>>>>> ad2bc7cec8ebb0dd1bd962b2ee907c44a77010fc
