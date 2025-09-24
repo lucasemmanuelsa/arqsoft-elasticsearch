@@ -19,10 +19,6 @@ def fuzzy_search(user_query, size=10):
     results = []
 
     for hit in res['hits']['hits']:
-        results.append(f"\nTítulo:{hit['_source']['title']}\nTrecho:{hit['_source']['text'][:300]}\nRelevância:{hit['_score']:.2f}\n")
+        results.append(f"\nTítulo:{hit['_source']['title']}\nTrecho:{hit['_source']['text']}\nRelevância:{hit['_score']:.2f}\n")
     
     return results
-
-if __name__ == "__main__":
-    user_query = input("Digite a sua consulta: ")
-    fuzzy_search(user_query, 10)
