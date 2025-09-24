@@ -40,3 +40,5 @@ OBS:
 - A porta de conexão com a api do elasticsearch é 9200
 - A porta de conexão com o postgresql é 5432
 - Certifique-se de adicionar as dependências extras que for utilizar no arquivo requirements.txt
+
+### deve ser feita a indexação com postgres utilizando a função baixar_dependencias
