@@ -4,7 +4,7 @@ import time
 from elasticsearch import Elasticsearch
 from constants import INDEX_NAME, ES_HOST
 
-def search_articles(query, size=10):
+def search_articles(query, size=5):
     es = Elasticsearch(ES_HOST)
     response = es.search(
         index=INDEX_NAME,
@@ -38,9 +38,3 @@ def search_articles(query, size=10):
         artigo_path = os.path.join(query_dir, f"artigo{idx}.txt")
         with open(artigo_path, "w", encoding="utf-8") as f:
             f.write(artigo_str)
-
-if __name__ == "__main__":
-    start_time = time.time()
-    search_articles("Quem foi Platão?", size=5)
-    end_time = time.time()
-    print(f"Tempo de execução: {end_time - start_time:.4f} segundos")
