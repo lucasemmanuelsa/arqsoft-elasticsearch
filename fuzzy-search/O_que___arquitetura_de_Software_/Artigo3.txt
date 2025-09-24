@@ -1,0 +1,76 @@
+
+Título:Arquitetura de software
+Trecho:Arquitetura de software
+Introduction
+A '''arquitetura de software''' de um sistema consiste na definição dos componentes de software, suas propriedades externas, e seus relacionamentos com outros softwares. O termo também se refere à documentação da arquitetura de software do sistema. A documentação da arquitetura do software facilita: a comunicação entre os stakeholders, registra as decisões iniciais acerca do projeto de alto-nível, e permite o reúso do projeto dos componentes e padrões entre projetos.
+Introdução
+O projeto de arquitetura está preocupado com a compreensão de como um sistema deve ser organizado e com a estrutura geral desse sistema. No modelo do processo de desenvolvimento de software, o projeto de arquitetura é o primeiro estágio no processo de projeto de software. É o elo crítico entre o projeto e a engenharia de requisitos, pois identifica os principais componentes estruturais de um sistema e os relacionamentos entre eles. O resultado do processo de projeto de arquitetura é um modelo de arquitetura que descreve como o sistema está organizado em um conjunto de componentes de comunicação.
+História
+A origem da arquitetura de software como um conceito foi primeiramente identificado no trabalho de pesquisa de Edsger Dijkstra em 1968 e David Parnas no início de 1970. Estes cientistas enfatizaram a importância das estruturas de um sistema de software e a criticidade da identificação da sua estrutura. O estudo deste campo aumentou de popularidade desde o início de 1990 com os trabalhos de pesquisa concentrando-se nos padrões de estilo de arquitetura de software, linguagens de descrição de arquitetura de software, documentação de arquitetura de software, e métodos formais. Muitas instituições de pesquisa tais como a Carnegie Mellon University e a University of California, Irvine estavam realizando muitas pesquisas no campo da arquitetura de software. Mary Shaw e David Garlan da Carnegie Mellon escreveram um livro intitulado ''Software Architecture: Perspectives on an Emerging Discipline'' em 1996, o qual trazia a tona conceitos da arquitetura de software, tais como componentes, conexões, estilos, etc. Os esforços do UCI's (Institute for Software Research) na pesquisa da arquitetura de software foram inicialmente direcionados para os estilos de arquitetura, descrições de linguagens de arquitetura, e arquiteturas dinâmicas.
+
+''ANSI/IEEE 1471-2000: Recommended Practice for Architecture Description of Software-Intensive Systems'' foi a primeira norma padrão na área de arquitetura de software, e foi recentemente adotada pelo ISO como ''ISO/IEC DIS 25961''.
+Descrevendo arquiteturas
+=== Linguagem de descrição de arquitetura ===
+As Linguagens de descrição de arquitetura (LDAs) são usadas para descrever a arquitetura de software. Várias LDAs distintas foram desenvolvidas por diferentes organizações, incluindo Wright (desenvolvido por Carnegie Mellon), Acme (desenvolvido por Carnegie Mellon), xADL (desenvolvido por UCI), Darwin (desenvolvido por Imperial College London), DAOP-ADL (desenvolvido pela University of Málaga). Elementos comuns de uma LDA são componente, conexão e configuração.
+
+=== Visões ===
+A arquitetura de software é normalmente organizada em visões, as quais são análogas aos diferentes tipos de plantas utilizadas no estabelecimento da arquitetura. Na Ontologia estabelecida pela ANSI/IEEE 1471-2000, ''visões'' são instâncias de ''pontos de vista'', onde cada ponto de vista existe para descrever a arquitetura na perspectiva de um conjunto de stakeholders e seus consortes.
+
+Algumas possíveis visões são:
+* Visão funcional/lógica
+* Visão de código.
+* Visão de desenvolvimento/estrutural
+* Visão de concorrência/processo/''thread''
+* Visão física/evolutiva
+* Visão de ação do usuário/''retorno''
+
+Várias linguagens para descrição da arquitetura de software foram inventadas, mas nenhum consenso foi ainda alcançado em relação a qual conjunto de símbolos ou sistema de representação deve ser adotado. Alguns acreditam que a UML irá estabelecer um padrão para ''representação de arquitetura de software''. Outros acreditam que os desenvolvimentos efetivos de software devem contar com a compreensão única das restrições de cada problema, e notações tão universais são condenadas a um final infeliz porque cada uma provê uma notação diferenciada que necessariamente torna a notação inútil ou perigosa para alguns conjuntos de tarefas. Eles apontam a proliferação de linguagens de programação e a sucessão de tentativas falhas para impor uma simples 'linguagem universal' na programação, como uma prova da tendência do software para a diversidade e não para os padrões.
+
+=== Padrões de arquitetura ===
+* DODAF 
+* MODAF 
+* TOGAF 
+* Zachman framework 
+* Federal Enterprise Architecture
+Exemplos de arquitetura de software
+Há muitas formas comuns de projetar módulos de software de computador e suas comunicações, entre elas:
+* Cliente-Servidor
+* Computação distribuída
+* P2P
+* Quadro Negro
+* Criação implícita
+* Pipes e filtros
+* Plugin
+* Aplicação monolítica
+* Modelo em três camadas
+* Analise de sistema estruturada (baseada em módulos, mas usualmente monolíticas em dentro dos módulos)
+* Arquitetura orientada a serviço
+* Arquitetura orientada a busca
+* MVC
+Ver também
+* Padrões de projeto de software
+* Antipadrões de software
+* Modelagens de dados padrões
+* Matriz de estrutura de dependência
+* Arquitetura de negócio
+* Arquitetura de dados
+* Arquitetura de processo
+* Arquiteto de software
+Ligações externas
+* Software architecture definitions at Carnegie Mellon University Software Engineering Institute
+*  Software architecture vs. software design
+*  Worldwide Institute of Software Architects
+*  Grady Booch's Handbook of Software Architecture project
+*  SoftwareArchitectures.com Independent resource of information on the discipline
+*  International Association of Software Architects
+*  Microsoft Architecture Journal
+*  Pangea - Professional and Academic Network to the Growing and Evolution of Architecture (Portuguese)
+*  Blog da OCTO Technology Brasil, empresa de consultoria em Arquitetura de Sistemas de Informação
+
+
+
+
+
+Categoria:Engenharia de software
+Categoria:Edsger Dijkstra
+Relevância:73.78

@@ -1,0 +1,182 @@
+Title: Software de código aberto
+
+Software de código aberto
+Introduction
+'''Software de código aberto''' (do inglês open source software ou '''OSS''') é o software de computador com o seu código fonte disponibilizado e licenciado com uma licença de código aberto no qual o direito autoral fornece o direito de estudar, modificar e distribuir o software de graça para qualquer um e para qualquer finalidade. Software de código aberto muitas vezes tem desenvolvido público, de maneira associativa. Software de código aberto é o exemplo mais proeminente de desenvolvimento em código aberto e muitas vezes comparado a (tecnicamente definido) de conteúdo gerado pelo usuário ou (legalmente definido) movimentos de conteúdo aberto.
+
+Um relatório do Standish Group (de 2008) afirma que a adoção de modelos de software de código aberto, resultou em uma economia de cerca de $ 60 bilhões por ano aos consumidores.
+História
+O movimento software livre, foi lançado em 1983 liderado pelo hacker Richard Stallman . Em 1998, um grupo de indivíduos defendeu que o termo software livre deveria ser substituído por software open-source (OSS) como uma expressão menos ambígua e mais confortável para o mundo corporativo. O desenvolvedor de software pode publicar seu software com uma licença de código aberto, de modo que qualquer pessoa pode também desenvolver o mesmo software ou entender o seu funcionamento interno. Com o software de código aberto, geralmente qualquer um está autorizado a criar modificações dele, portá-lo para novos sistemas operacionais e arquiteturas de processadores, compartilhá-lo com outras pessoas ou, em alguns casos, comercializá-lo. Estudiosos como Casson e Ryan têm apontado várias razões baseadas em políticas para a adoção do código aberto - em particular, a proposta de valor elevado de código-fonte aberto (quando comparado com a maioria dos formatos proprietários) nas seguintes categorias;
+
+* Segurança
+* Acessibilidade
+* Transparência
+* Perpetuidade
+* interoperabilidade
+* Localização, particularmente no contexto de governos locais (que tomam decisões de software). Casson e Ryan argumentam que "os governos têm a responsabilidade inerente e dever fiduciário para com os contribuintes", que inclui a análise cuidadosa desses fatores ao decidir adquirir software proprietário ou implementar uma opção open-source.
+
+O ''Open Source Definition'', especialmente, apresenta uma filosofia open-source, e ainda define os termos de uso, modificação e redistribuição do software open-source. Licenças de software concedem direitos aos usuários que seriam reservados pela lei de direitos autorais para o titular dos direitos autorais. Várias licenças de software open-source classificaram-se dentro dos limites da ''Open Source Definition''. O exemplo mais proeminente e popular é a GNU General Public License (GPL), que "permite a distribuição gratuita sob a condição de que novos desenvolvimentos e aplicações sejam colocadas sob a mesma licença", assim também livre. Embora a distribuição de código aberto apresenta uma maneira de tornar o código fonte de um produto de acesso público, as licenças de código aberto permitem aos autores afinar tal acesso.
+
+O rótulo de código aberto saiu de uma reunião estratégica realizada em 7 de abril de 1998, em Palo Alto, em reação ao anúncio da Netscape de janeiro de 1998, uma versão de código fonte do Navigator (como Mozilla). Essa reunião incluiu indivíduos como Tim O'Reilly, Linus Torvalds, Tom Paquin, Jamie Zawinski, Larry Wall, Brian Behlendorf, Sameer Parekh, Eric Allman, Greg Olson, Paul Vixie, John Ousterhout, Guido van Rossum, Philip Zimmermann, John Gilmore e Eric S. Raymond. Eles usaram a oportunidade antes do lançamento do código-fonte do Navigator para esclarecer a potencial confusão causada pela ambiguidade da palavra "free" em inglês.
+
+Muitas pessoas afirmaram que o nascimento da Internet, desde 1969, começou o movimento código aberto, enquanto outros não fazem distinção entre os movimentos código aberto e software livre.
+
+A Free Software Foundation (FSF), iniciada em 1985, destina a palavra "livre" com significado de ''liberdade para distribuir'' (ou "livre como em liberdade de expressão"), e não a ''liberdade de custo'' (ou "livre como em cerveja grátis"). Uma vez que uma grande quantidade de software livre já era (e ainda é) de distribuido de forma gratuita, o software livre tornou-se associado com custo zero, o que parecia anti-comercial.
+
+A Open Source Initiative (OSI) foi formada em fevereiro de 1998 por Eric S. Raymond e Bruce Perens. Com pelo menos 20 anos de evidências histórias de casos de desenvolvimento de software fechado versus o desenvolvimento aberto já fornecido pela comunidade de desenvolvedores na Internet, a OSI apresentou o case "open source" para as empresas comerciais, como a Netscape. A OSI esperava que o uso do rótulo "open source", um termo sugerido por Peterson do Foresight Institute na reunião estratégia, seria eliminar a ambiguidade, especialmente para os indivíduos que percebem "software livre", como anti-comercial. Eles tentaram trazer uma maior visibilidade para os benefícios práticos do código fonte livremente disponível, e eles queriam trazer grandes empresas de software e outras indústrias de alta tecnologia em open source. Perens tentou registrar "open source" como uma marca de serviço para a OSI, mas a tentativa era impraticável por padrões trademark. Entretanto, devido à apresentação do papel de Raymond para a alta gerência da Netscape—Raymond só descobriu quando leu o  comunicado da imprensa, e foi chamado pelo CEO da Netscape Jim Barksdale PA no final do dia, Netscape lançou o seu código-fonte Navigator como open source, com resultados favoráveis.
+A Open Source Definition
+O logotipo da Open Source Initiative
+A definição da Open Source Initiative é amplamente reconhecida como o padrão ou definição de fato.Raymond e Perens formaram a organização em fevereiro de 1998. Com cerca de 20 anos de evidências de casos históricos de desenvolvimento fechado e aberto já proporcionada pela Internet, OSI continuou a apresentar o case "open source" para as empresas comerciais. Eles tentaram trazer uma maior visibilidade para os benefícios práticos do código-fonte livremente disponível, e queria trazer grandes empresas de software e outras indústrias de alta tecnologia em open source.
+
+OSI usa a ''The Open Source Definition'' para determinar se ele considera uma licença de software de código aberto. A definição foi baseada na Debian Free Software Guidelines, escrito e adaptado principalmente por Bruce Perens.  Perens não baseou a sua escrita sobre as "quatro liberdades" do Software Livre da FSF, que eram apenas disponíveis amplamente mais tarde.
+
+Sobre a definição de Perens, ''open source'' descreve um amplo tipo geral de licença de software que faz com que o código-fonte disponível para o público em geral com restrições relaxadas ou inexistencia de direitos autorais. Os princípios, como afirmou, não dizem absolutamente nada sobre a marca ou patente de uso e exigem absolutamente nenhuma cooperação para garantir que qualquer auditoria comum ou regime no lançamento aplica-se a todos os trabalhos derivados. É um "recurso" explícito do código aberto que pode colocar quaisquer restrições sobre o uso ou distribuição por qualquer organização ou usuário. Ele proíbe isso, em princípio, para garantir o acesso contínuo a obras derivadas, mesmo por parte dos principais contribuintes originais.
+Proliferação do termo
+Embora o termo "open source" aplicado inicialmente apenas para o código fonte do software, , que agora está sendo aplicado a muitas outras áreas, como Open Source Ecology, um movimento de descentralização de tecnologias para que qualquer ser humano possa usá-las. No entanto, é muitas vezes mal aplicado a outras áreas que têm diferentes princípios e concorrentes, que se sobrepõem parcialmente.
+O uso não-software
+Os princípios do código aberto foram adaptados para muitas formas de conteúdo gerado pelo usuário e tecnologia, incluindo hardware open-source, Wikipedia, e de acesso aberto a publicações.
+
+Os defensores do movimento conteúdo aberto defendem algumas restrições de uso, requisitos para compartilhar alterações e atribuição de outros autores do trabalho.
+
+Esta "cultura" ou ideologia considera que os princípios se aplicam de modo mais geral para facilitar a entrada simultânea de diferentes agendas, abordagens e prioridades, em contraste com os modelos mais centralizados de desenvolvimento, como os normalmente usados ​​em empresas comerciais.
+Os modelos de negócios
+Há uma série de barreiras comumente reconhecidos para a adoção de software open-source pelas empresas. Estas barreiras incluem a percepção de que as licenças de código aberto são virais, falta de suporte formal e formação, a velocidade das mudanças, e a falta de um roteiro a longo prazo. A maioria dessas barreiras estão relacionadas com o risco. Do outro lado, nem todos os projetos proprietários revelam exatamente os planos para o futuro, nem todas as licenças de código aberto são igualmente virais e diversos projetos sérios OSS (especialmente sistemas operacionais) realmente ganham dinheiro com suporte pago e documentação.
+
+A estratégia de negócios de empresas de software de fonte aberta comerciais comumente empregada é a estratégia de licença dual, como demonstrado por Ingres, MySQL, Alfresco, e outros.
+
+Outra estratégia de negócio poderia ser adaptada dos sistemas de micropagamentos existentes na Internet, incluindo Flattr e PayPal.
+Produtos de código aberto amplamente utilizados
+Projetos de software em código aberto são construídos e mantidos por uma rede de programadores voluntários. Os principais exemplos de produtos de código aberto são o Apache HTTP Server, a plataforma de comércio eletrônico OsCommerce e o navegador de internet Mozilla Firefox. Um dos produtos de código aberto mais bem sucedidos é o sistema operacional GNU/Linux, um sistema operacional open-source Unix-like e seus derivados Android, um sistema operacional para dispositivos móveis. Em alguns campos, open software é a norma, como aplicações em voz sobre IP como Asterisk (PBX).
+Filosofia de desenvolvimento
+Em seu ensaio de 1997 ''A Catedral e o Bazar'', evangelista de código aberto Eric S. Raymond sugere um modelo para o desenvolvimento OSS conhecido como o modelo ''bazar''. Raymond compara o desenvolvimento de software por metodologias tradicionais para a construção de uma catedral", cuidadosamente elaborado por mágicos ou pequenos grupos de magos trabalhando em esplêndido isolamento". Ele sugere que todo o software deve ser desenvolvido usando o estilo bazar, que ele descreveu como "um grande e barulhento bazar de diferentes agendas e abordagens."
+
+No modelo tradicional de desenvolvimento, que chamou o modelo ''catedral'', o desenvolvimento ocorre de forma centralizada. As funções são claramente definidas. As funções incluem pessoas dedicadas ao projeto (os arquitetos), as pessoas responsáveis ​​pela gestão do projeto, e as pessoas responsáveis ​​pela execução. Engenharia de software tradicional segue o modelo catedral. Fred P. Brooks, em seu livro ''The Mythical Man-Month'' defende este modelo. Ele vai mais longe ao dizer que, a fim de preservar a integridade da arquitetura de um sistema, o projeto do sistema deve ser feito por tão poucos arquitetos o possível.
+
+O modelo bazaar, contudo, é diferente. Neste modelo, os papéis não estão claramente definidos. Gregorio Robles sugere que o software desenvolvido utilizando o modelo bazar deve apresentar os seguintes padrões:
+
+; Os usuários devem ser tratados como codesenvolvedores:Os usuários são tratados como codesenvolvedores e assim eles devem ter acesso ao código-fonte do software. Além disso, os usuários são incentivados a apresentar adições ao software, correções de código para o software, relatórios de bugs, documentação etc. Ter mais codesenvolvedores aumenta a taxa em que o software evolui. Lei de Linus diz: "Dados olhos suficientes, todos os erros são triviais." Isto significa que, se muitos usuários visualizarem o código fonte, eles acabarão por encontrar todos os bugs e sugerir como corrigi-los. Note-se que alguns usuários têm habilidades avançadas em programação e, além disso, a máquina de cada usuário fornece um ambiente de testes adicional. Este novo ambiente de teste oferece a habilidade de encontrar e fixar um novo bug.
+; As primeiras versões: A primeira versão do software deve ser lançada tão cedo quanto possível, de modo a aumentar as chances de encontrar codesenvolvedores mais cedo.
+
+; Integração frequente: Alterações de código devem ser integradas (incorporando uma base de código compartilhado) o mais rápido possível, de modo a evitar a sobrecarga de fixação de um grande número de erros no final do ciclo de vida do projeto. Alguns projetos de código aberto têm nightly builds onde a integração é feita automaticamente em uma base diária.
+; Várias versões: Deve haver pelo menos duas versões do programa. Deve haver uma versão buggier com mais recursos e uma versão mais estável, com menos recursos. A versão de buggy (também chamado de versão de desenvolvimento) é para usuários que querem o uso imediato dos recursos mais recentes, e estão dispostos a aceitar o risco de usar um código que ainda não completamente testado. Os usuários podem, então, agir como codesenvolvedores, relatar bugs e fornecer correções de bugs.
+
+; Alta modularização:A estrutura geral do software deve ser modular, permitindo o desenvolvimento paralelo em componentes independentes.
+; Estrutura de tomada de decisão dinâmica:Há uma necessidade de uma estrutura de tomada de decisão, seja formal ou informal, que toma decisões estratégicas, dependendo da mudança de requisitos de usuário e de outros fatores. Cf.Programação extrema.
+
+Os dados sugerem, contudo, que a OSS não é tão democrática como o modelo bazar sugere. Uma análise de cinco mil milhões de bytes de código fonte livre/aberto por 31.999 desenvolvedores mostra que 74% do código foi escrito pelos mais ativos de 10% dos autores. O número médio de autores envolvidos em um projeto foi de 5,1, com mediana em 2.
+Licenciamento
+A licença define os direitos e obrigações que um licenciante concede ao licenciado. As licenças de código aberto concedem ao licenciado o direito de copiar, modificar e redistribuir o código fonte (ou conteúdo). Essas licenças podem ainda impor obrigações (por exemplo, modificações no código que são distribuídos devem ser disponibilizados em forma de código fonte, uma atribuição autor deve ser colocado em um programa/documentação com o código aberto).
+
+Autores inicialmente derivar um direito de conceder a licença para o seu trabalho com base na teoria legal que, após a criação de uma obra o autor detém os direitos autorais nesse trabalho. O que o autor/licenciador é concessor quando concede uma licença para copiar, modificar e redistribuir o trabalho deles é o direito de uso, direitos autorais do autor. O autor ainda retém a propriedade dos direitos autorais, o licenciado simplesmente está autorizado a utilizar esses direitos, conforme concedido na licença, desde que mantenham as obrigações da licença. O autor tem a opção de vender/ceder, contra licença, o direito exclusivo aos direitos autorais de seu trabalho, pelo que o novo proprietário/adquirente controla os direitos autorais. A propriedade dos direitos autorais (os "direitos") é separado e distinto da propriedade da obra (a "coisa") - uma pessoa pode possuir uma cópia de um pedaço de código (ou uma cópia de um livro), sem os direitos copiar, modificar ou redistribuir cópias do mesmo.
+
+Quando um autor contribui com código para um projeto open source (por exemplo, Apache.org) o faz sob uma licença explícita (por exemplo, o Apache Contributor License Agreement) ou uma licença implícita (por exemplo, a licença de código aberto em que o projeto já está licenciado o código). Alguns projetos de código aberto não têm contribuído com código sob uma licença, mas realmente necessitam (conjuntamente) adquirir os direitos autorais do autor, a fim de aceitar contribuições de código para o projeto (por exemplo, OpenOffice.org e seu Contrato de Cessão de Direitos Autorais conjunto).
+
+Colocar o código (ou conteúdo) em domínio público é uma forma de renúncia do autor (ou proprietário) de direitos autorais em seu trabalho. Nenhuma licença é concedida, e nenhuma delas é necessária, copiar, modificar ou redistribuir uma obra em domínio público.
+
+Exemplos de licença de software livre/licenças de código aberto incluem licença Apache, licença BSD, GNU General Public License, GNU Lesser General Public License, licença MIT, Eclipse Public License e Licença pública Mozilla.
+
+A proliferação de licenças de código aberto é um dos poucos aspectos negativos do movimento open source porque muitas vezes é difícil de entender as implicações legais das diferenças entre as licenças. A mais de 180 mil projetos de código aberto disponíveis e seus mais de 1.400 licenças únicas, a complexidade de decidir a forma de gerenciar o uso do open-source dentro do "código fechado" empresas comerciais têm aumentado dramaticamente. Alguns são home-grown, enquanto outros são modelados por licenças FOSS mainstream como Berkeley Software Distribution ("BSD"), Apache, MIT-style (Massachusetts Institute of Technology), ou GNU General Public License ("GPL"). Em vista disso, os praticantes de código aberto estão começando a usar esquemas de classificação em que licenças de software livre são agrupados (normalmente baseadas na existência e obrigações impostas pela prestação de copyleft, a força da provisão copyleft).
+
+Um marco legal importante para o open source/movimento software livre foi aprovado em 2008, quando o tribunal federal dos EUA decidiu que as licenças de software livre, definitivamente, definir as condições juridicamente vinculativos sobre o uso de trabalhos com direitos autorais, e eles são, portanto, aplicáveis ​​sob a lei de direitos autorais existente. Como resultado, se os usuários finais violam as condições de licenciamento, a licença desaparece, o que significa que estão infringindo os direitos do autor.
+Financiamento
+Ao contrário do software proprietário nas prateleiras, que vem com licenças restritivas de direitos autorais, software open source pode ser doado sem nenhum custo. Isso significa que seus criadores não podem exigir que cada usuário pague uma taxa de licença para financiar o desenvolvimento. Em vez disso, uma série de modelos de financiamento alternativo vem se desenvolvendo.
+
+O software pode ser desenvolvido como um projeto de consultoria para um ou mais clientes. Os clientes pagam para direcionar os esforços dos desenvolvedores: tem erros priorizados e corrigidos ou recursos adicionados. As empresas ou consultores independentes também podem cobrar por formação, instalação, suporte técnico, ou personalização do software.
+
+Outra abordagem para o financiamento é fornecer o software livremente, mas vender licenças complementares proprietárias, como bibliotecas de dados. Por exemplo, um programa CAD open-source pode necessitar de partes das bibliotecas que são vendidas por assinatura ou tarifa plana básica. Software de código fonte aberto pode também promover a venda de hardware especializado que interage, como no caso do Asterisk software de telefonia, desenvolvido por um fabricante de hardware telefonico PC (Digium).
+
+Muitos projetos de software de código aberto começaram como projetos de pesquisa dentro das universidades, como projetos pessoais dos alunos ou professores, ou como ferramentas para auxiliar a pesquisa científica. A influência das universidades e instituições de pesquisa sobre open source mostra o número de projetos com nomes de suas instituições que os acolhem, tais como BSD Unix, CMU Common Lisp, ou o NCSA HTTPd que evoluiu para Apache.
+
+As empresas podem contratar desenvolvedores para trabalharem em projetos open-source que são úteis à infraestrutura da empresa: neste caso, é desenvolvido e não vendido, mas como uma espécie de utilidade pública compartilhada. Um bug-fix local ou solução para um problema de software, escrito por um desenvolvedor ou a pedido de uma empresa ou para fazer seu próprio trabalho mais fácil, pode ser lançado como uma contribuição open-source sem custar nada a empresa. O projeto maior, como o kernel do Linux pode ter dezenas de colaboradores em empresas que utilizam e dependem dele, assim como desenvolvedores hobbystas e pesquisadores.
+Comparação com código fechado
+O debate sobre ''código aberto'' vs ''código fechado'' (alternativamente chamado software proprietário) às vezes é quente.
+
+As quatro principais razões (como previsto no Open Source Business Conference) indivíduos ou organizações escolher o software de código aberto são: 1) custo mais baixo, 2) segurança, 3) 'lock in' nenhum fornecedor, e 4) melhor qualidade.
+
+Uma vez que as empresas inovadoras já não dependem fortemente das vendas de software, software proprietário tornou-se uma necessidade a menos. Como tal, coisas como open source sistema de gerenciamento de conteúdo—ou implementações—CMS estão se tornando mais comuns. Em 2009, a Casa Branca mudou o seu sistema CMS a partir de um sistema proprietário para Drupal CMS open source. Além disso, empresas como a Novell (que tradicionalmente vendem software de maneira antiga) debatem continuamente os benefícios da mudança, disponibilizando código aberto, já tendo mudado parte da oferta de produtos para abrir o código fonte. Desta forma, o software open source fornece soluções para problemas específicos. Como tal, é relatado que 98% das empresas de nível empresarial usar ofertas de software de código aberto em alguma capacidade.
+
+Com essa mudança de mercado, os sistemas mais críticos estão começando a confiar em ofertas de código aberto,  permitindo um maior financiamento (como os subsídios do Departamento de Segurança Interna dos EUA) para ajudar a "caça aos bugs de segurança."
+
+Isso não é argumento que o software open source não tem suas falhas. Uma das maiores barreiras que enfrentam uma ampla aceitação de software de código aberto refere-se à falta de suporte técnico em geral. Empresas open source muitas vezes combatem oferecendo suporte às vezes sob um nome de produto diferente. Acquia fornece suporte de nível corporativo para sua alternativa open source, Drupal, por exemplo.
+
+Muitos defensores argumentam que o software de código aberto é inerentemente mais seguro, pois qualquer pessoa pode visualizar, editar e mudar o código. Mas, software de código fechado—algumas pesquisas—, sugerem que os indivíduos que não são pagos para esfregar código não tem nenhum incentivo para fazerem o trabalho monótono.
+
+Um estudo do código fonte do Linux tem 0,17 bugs por mil linhas de código, enquanto o software proprietário geralmente atinge pontuações entre 20 e 30 bugs por 1000 linhas.
+
+Ajzen a teoria do comportamento planejado explora a ligação entre atitudes e comportamentos. De acordo com um estudo piloto com organizações adotando (ou não adoção) OSS; vários fatores de significância estatística foram observadas nas crenças do gestor em relação a (a) atitudes resultantes, (b) as influências e comportamentos dos outros e (c) as suas capacidades de agir.
+
+=== Software livre ===
+
+
+A principal diferença é que, ao escolher um termo sobre o outro (ou seja, ou "open source" ou "software livre"), um permite que outros saibam sobre os objetivos. Como Richard Stallman diz, "Open source é uma metodologia de desenvolvimento, software livre é um movimento social".
+
+Os críticos disseram que o termo "open source" promove uma ambiguidade de um tipo diferente de tal forma que confunde a mera disponibilidade da fonte com a liberdade de usar, modificar e redistribuir. Desenvolvedores têm usado os termos alternativos ''Free/open source Software'' (FOSS), ou ''Free/Libre/open source Software'' (FLOSS), consequentemente, para descrever software de fonte aberta, que também é software livre.
+
+O termo "código aberto" foi originalmente destinado a ser marca registrada, no entanto, o termo foi considerado demasiado descritivo, por isso a marca registrada não existe. A OSI preferiria que as pessoas tratassem de código aberto, como se fosse uma marca registrada, e usá-lo apenas para descrever software licenciado sob uma licença aprovada pela OSI.
+
+'''OSI Certified''' é uma marca licenciada apenas para as pessoas que distribuem software licenciado sob uma licença listada na lista da Open Source Initiative.
+
+Software de código aberto e software livre são termos diferentes para o software que vem com certos direitos ou liberdades, para o usuário. Eles descrevem duas abordagens e filosofias no sentido de software livre. ''Open source'' e ''software livre'' (ou ''software libre''), tanto descrevem software que é livre de restrições de licenciamento onerosas. Ele pode ser usado, copiado, estudado, modificado e redistribuído sem restrição. Software livre não é o mesmo que freeware, software disponível a preço zero.
+
+A definição de software de código aberto foi escrita para ser quase idêntica à definição de Software Livre. Há muito poucos casos de software que é software livre, mas não é um software de código aberto, e vice-versa. A diferença entre os termos é onde eles colocam a ênfase. "Software Livre" é definido em termos de dar a liberdade do usuário. Isso reflete o objetivo do movimento do software livre. "Open source" destaca que o código fonte é visível a todos, defensores do termo geralmente enfatizam a qualidade do software e como esta é causada pelos modelos de desenvolvimento que são possíveis e populares entre os projetos de software livre e de código aberto.
+
+A FSF acredita que o conhecimento do conceito de liberdade é uma exigência essencial,  insiste na utilização do termo ''livre'', e separa-se do movimento de fonte aberta.
+Open-source vs. fonte disponível
+Embora a definição OSI de "software de código aberto" é amplamente aceita, um pequeno número de pessoas e organizações usam o termo para se referir ao software onde a fonte está disponível para visualização, mas que não pode, legalmente, ser modificado ou redistribuído. Esse tipo de software é mais frequentemente referido como ''fonte disponível'', ou como ''shared source'', um termo cunhado pela Microsoft em 2001. Enquanto em 2007, duas licenças de código compartilhado foram certificadas pela OSI, a maioria das licenças de código compartilhado ainda são ''somente fontes disponíveis''.
+
+Em 2007, Michael Tiemann, presidente da OSI, havia criticado empresas como SugarCRM para promover o seu software de "código aberto", quando na verdade ele não tem uma licença OSI-aprovada. No caso do SugarCRM, foi porque o software é o chamado "badgeware", uma vez que especificou um "badge", que deve ser exibida na interface do usuário (SugarCRM, desde então, passou a GPLv3). Outro exemplo foi Scilab anteriores à versão 5, que por si só ​​chamado "a plataforma de código aberto para computação numérica", mas tinha uma licença que proibia a redistribuição comercial de versões modificadas. Porque OSI não tem uma marca registrada para o termo "open source", a sua capacidade legal para impedir tal uso do termo é limitada, mas Tiemann defende usando a opinião pública da OSI, clientes e membros da comunidade para pressionar essas organizações a mudar sua licença ou para usar um termo diferente.
+
+As licenças Creative Commons, projetada principalmente para a mídia, mas, por vezes, usado para software, oferece elementos na cláusula de licenças que permitem a concessão de licenças no espectro entre Open-source, fonte disponível e de domínio público.
+A História não deve ser esquecida
+Em 1997, Eric Raymond publicou A Catedral e o Bazar, uma análise reflexiva da comunidade hacker e os princípios do software livre. O documento recebeu atenção significativa no início de 1998, e foi um fator para motivar Netscape Communications Corporation para lançar sua  popular Netscape Communicator Internet suite como software livre. Este código é hoje mais conhecido como Mozilla Firefox e Thunderbird.
+
+O ato de Netscape propôs a Raymond e outros para pensar em como trazer ideias de software livre da FSF e benefícios percebidos para a indústria de software comercial. Eles concluíram que o ativismo social da FSF não era atraente para empresas como a Netscape, e procuraram uma maneira de remarcar o movimento do software livre para enfatizar o potencial de negócios de compartilhamento e colaboração em código fonte do software. O novo nome que eles escolheram foi "open source", e rapidamente, Bruce Perens, o editor Tim O'Reilly, Linus Torvalds, e outros assinaram a remarcação. O Open Source Initiative foi fundada em fevereiro de 1998 para incentivar o uso do novo  período e evangelizar os princípios de código aberto.
+
+Enquanto a Open Source Initiative procurou incentivar o uso do novo  período e evangelizar os princípios que aderiram ,os  fornecedores de software comercial encontraram-se cada vez mais ameaçados pelo conceito de software distribuído gratuitamente e o acesso universal de um aplicativo de código fonte. O executivo Microsoft declarou publicamente em 2001 que "open source é um destruidor de propriedade intelectual. Eu não posso imaginar algo que poderia ser pior do que isso para o negócio de software e os negócios de propriedade intelectual". Este ponto de vista resume perfeitamente a inicial resposta a FOSS por algumas empresas de software. No entanto, enquanto FOSS tem historicamente desempenhado um papel fora do mainstream do desenvolvimento de software privado, as empresas grandes como Microsoft começaram a desenvolver oficialmente em código aberto  presente na internet. IBM, Oracle, Google e State Farm são apenas algumas das empresas com participação pública séria no mercado open source competitivo de hoje. Houve uma mudança significativa na filosofia da empresa sobre o desenvolvimento de software livre e de código aberto (FOSS).
+Ver também
+* Código aberto
+* Software livre
+* Comunidade de software livre
+* Defesa do código aberto
+* Open Source Initiative
+* Open Source Software Institute
+* Segurança de software de código aberto
+* Video games de código aberto
+* Modelos de negócios para software de código aberto
+* Shared source
+* Linha do tempo no software de código aberto
+* Hardware livre
+Leitura complementar
+* 
+* Coleman, E. Gabriella. ''Coding Freedom: The Ethics and Aesthetics of Hacking'' (Princeton UP, 2012)
+* 
+* 
+* 
+* '' Understanding FOSS''
+* 
+* 
+* Lerner, J. & Tirole, J. (2002): ‘Some simple economics on open source’, Journal Of Industrial Economics 50(2), p 197–234
+* 
+* 
+* Rossi, M. A. (2006): Decoding the free/open source software puzzle: A survey of theoretical and empirical contributions, in J. Bitzer P. Schröder, eds, ‘The Economics of Open Source Software Development’, p 15–55.
+Ligações externas
+* Artigo da Computerworld:  Does the open-source development model work for business users?
+*  Definição de código abertoda Open Source Initiative
+*  Open Sources: Voices from the Open Source Revolution— um livro on-line que contém ensaios de membros proeminentes da comunidade de código aberto
+*  Free / Open Source Research Community— Muitos trabalhos de pesquisa on-line sobre Código Aberto
+*  FreeOpenSourceSoftware.org- Wiki sobre a história de código aberto, as organizações, as licenças, as pessoas, software.
+* A apresentação do desenvolvedor KDE Aaron Seigo  "How OSS Improves Society" na the 2nd Trans-Pacific Open Source Software Conference em Honolulu, Hawaii, Janeiro de 2006.
+* '' Whence The Source: Untangling the Open Source/Free Software Debate'', ensaio sobre as diferenças entre software livre e open source, por Thomas Scoville
+*  Berry, D M (2004). The Contestation of Code: A Preliminary Investigation into the Discourse of the Free Software and Open Software Movement, Critical Discourse Studies, Volume 1(1).
+*  Estudo da UE sobre adoção FLOSS
+*  Open Source Observatory e Repositório
+*  Solicitações para governo de código aberto
+*  OSDir
+
+
+
+
+
+
+Categoria:Software livre
+Categoria:Licenças de programas de computador

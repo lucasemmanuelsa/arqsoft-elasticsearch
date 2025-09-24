@@ -51,16 +51,9 @@ def start_connection():
     )
     cur = conn.cursor()
 
-@app.get("/baixar-dependencias")
 def baixar_dependencias():
     #Caso precise criar a tabela e adaptar para full-text search novamente basta executar a função
     create_table()
     insert_articles_from_wikipedia("ptwiki-latest.json")
     adapt_table_to_fulltextsearch()
 
-
-if __name__ == "__main__":
-    start_connection()
-    uvicorn.run(app, host="127.0.0.1", port=8000)
-    cur.close()
-    conn.close()

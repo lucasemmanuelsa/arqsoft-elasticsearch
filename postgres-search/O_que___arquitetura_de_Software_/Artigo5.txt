@@ -1,0 +1,268 @@
+Title: ISO/IEC 12207
+
+ISO/IEC 12207
+Introduction
+A '''ISO/IEC 12207''' é a norma ISO/IEC que define '''processo de Engenharia de Software''', atividades e tarefas que são associados com os processos do ciclo de vida do software desde sua concepção até a retirada/descontinuação do software. 
+
+A norma internacional ''ISO/IEC 12207'' tem como objetivo principal estabelecer uma estrutura comum para os processos de ciclo de vida e de desenvolvimento de softwares visando ajudar as organizações a compreenderem todos os componentes presentes na aquisição, desenvolvimento e fornecimento de software e, assim, conseguirem firmar contratos e executarem projetos de forma mais eficaz.  Para isso é necessário que compradores, fornecedores, desenvolvedores, mantenedores, operadores, gerentes e técnicos envolvidos no desenvolvimento de software usem uma linguagem/framework comum.
+
+Visa ser ''o padrão'' que define as tarefas necessárias para o desenvolvimento e manutenção de software.
+Introdução
+O padrão ISO/IEC 12207 define ao todo 25 processos, 95 atividades e 325 tarefas.
+
+Uma '''tarefa''' é uma ação com entradas e saídas. Pode ser um requisito (deve, ''shall''), recomendação (deveria, ''should'') ou permissão (pode, ''may'').
+
+Uma '''atividade''' é um conjunto de tarefas.
+
+Um processo é um conjunto de atividades relacionadas. É uma sequência de passos realizados para um determinado propósito/resultado ''IEEE 610.12, 1690''; o '''processo de software''' envolve ''métodos'', ''técnicas'', ''ferramentas'' e ''pessoas''.
+Um processo pode ser descrito de duas formas: por propósito ou resultado e por atividade.
+
+A '''descrição por propósito ou resultado''' é utilizada quando não há necessidade de detalhar o processo, apenas indicar o objetivo e o resultado. Essa abordagem poderá ser utilizada na avaliação do processo em relação aos modelos de maturidade de software como, por exemplo, o modelo CMMI e o modelo da ISO/IEC 15504.
+
+A '''descrição por atividade''' é a abordagem mais conhecida e intuitiva. Nela são descritas as atividades com as inter-relações e o algoritmo de execução de cada atividade. As atividades devem atingir o propósito do processo. Para isso deve adotar as premissas:
+
+* Que ''procedimentos e métodos'' serão usados para a execução das atividades;
+* Que ''ferramentas e equipamentos'' suportarão a realização das atividades, de forma a simplificar e ''automatizar o trabalho'';
+* Qual o ''perfil adequado'' de quem irá executar as atividades e qual o ''treinamento requerido'' nos ''procedimentos, métodos, ferramentas'' para que se possam realizar as atividades de forma adequada;
+* Quais as ''métricas de processo'' que poderão ser empregadas para que a execução do processo possa ter a ''qualidade avaliada''.
+
+A norma ISO/IEC 12207 estabelece uma arquitetura de alto nível do ciclo de vida de software que é construída a partir de um conjunto de processos e seus inter-relacionamentos. Os processos são descritos tanto em nível de propósito/saídas como em termos de atividades.
+
+A ISO/IEC 12207 ''não'' possui nenhuma ligação com ''métodos, ferramentas, treinamentos, métricas ou tecnologias'' empregadas. Esta determinação é útil para permitir que a norma seja utilizada mundialmente e possa acompanhar a evolução da Engenharia de Software nas diversas culturas organizacionais. Ela pode ser utilizada com qualquer modelo de ciclo de vida, método ou técnica de Engenharia de Software e linguagem de programação. Sua flexibilidade é uma característica importante, as atividades e tarefas do processo de ciclo de vida do software especificam "''o que fazer''" e não "''como fazer''".
+
+Os processos da ISO/IEC 12207 são ''modulares'', ou seja, são ''fortemente coesos'' e ''fracamente acoplados''. Isto significa que todas as partes de um processo são fortemente relacionadas, mas a quantidade de interfaces entre os processos é mínima.
+
+As regras listadas a seguir são fundamentais para identificação, escopo e estruturação dos processos.
+
+* Um processo deve ser ''modular'', isto é, convém que um processo execute ''uma e somente uma'' função dentro do ciclo de vida e é conveniente que as interfaces entre dois processos quaisquer sejam ''mínimas''; 
+* Cada processo é invocado na arquitetura; 
+* Se um ''processo A'' '''é invocado''' por um ''processo B'' e ''somente por ele'', então ''A'' '''pertence a''' ''B''; 
+* Se uma função é invocada por ''mais de um processo'', então esta função torna-se um ''processo''; 
+* Deve ser possível verificar qualquer função dentro do modelo de ciclo de vida; 
+* Convém que cada processo tenha uma estrutura interna ''suficientemente definida'' para que possa ser ''executável''.
+Estrutura
+Os processos, atividades e tarefas da ISO/IEC 12207 foram projetados para serem adaptados de acordo com cada projeto de software. Essa adaptação consiste no mapeamento de processos/atividades/tarefas relevantes/adequados ao projeto e, ao mesmo tempo, à supressão de processos/atividades/tarefas não aplicáveis.
+
+Os processos são agrupados/categorizados, por uma questão de organização, de acordo com a sua natureza, ou seja, o seu objetivo principal no ciclo de vida de software. Esse agrupamento resultou em 4 diferentes classes de processos, que são:
+
+* Processos fundamentais; 
+* Processo de apoio; 
+* Processos organizacionais;
+* Processos de adaptação.
+
+=== Processos Fundamentais ===
+Os '''processos fundamentais''' são necessários para que um software seja executado. Eles iniciam o ciclo de vida e comandam outros processos. São eles:
+
+* Aquisição: obter o produto e/ou serviço que satisfaça suas necessidades;
+* Fornecimento: prover um produto e/ou serviço; 
+* Desenvolvimento: transformar um conjunto de requisitos em um produto ou sistema de software; 
+* Operação: operar o produto no seu ambiente e prover suporte aos usuários; 
+* Manutenção: modificar o produto de software e depois liberá-lo para uso.
+
+=== Processos de Apoio ===
+Os '''processos de apoio''' auxiliam outros processos. Eles são usados para garantir a qualidade, mas não são fundamentais. São eles:
+
+* Documentação: prover e manter registros de informações do software;
+* Gerência de Configuração: estabelecer e manter a integridade de todos os produtos de trabalho (artefato) de um processo do projeto;
+* Garantia da Qualidade: prover garantia de que os produtos e processos estão em conformidade com o requisitos (padrões/normas) pré-definidos;
+* Verificação: confirmar que os produtos e/ou serviços refletem os requisitos especificados; 
+* Validação: confirmar que os requisitos para o uso específico de um produto e/ou serviço são atendidos; 
+* Revisão Conjunta: manter o entendimento (gerencial comum com os stakeholders);
+* Auditoria: determinar independentemente a conformidade dos produtos e processos contra os requisitos definidos; 
+* Resolução de Problema: assegurar que todos os problemas levantados sejam analisados e resolvidos;
+* Usabilidade: aumentar a facilidade do uso dos produtos e/ou serviços; 
+* Gerência de Solicitação de Mudanças: Prover e manter processos de gerencia de mudanças;
+* Avaliação do Produto: garantir, através de exame e medição sistemáticos, que o produto e/ou serviços atende às necessidades especificadas (explícitas) e implícitas dos usuários.
+
+=== Processos Organizacionais ===
+Os '''processos organizacionais''' auxiliam a '''organização e gerência''' geral dos processos e podem ser empregados fora do domínio de projetos e contratos específicos, servindo para toda a organização. São eles:
+
+* Gerência: organizar, monitorar e controlar a iniciação e o desempenho dos processos; 
+* Infraestrutura: manter uma infraestrutura estável e confiável; 
+* Melhoria: estabelecer, avaliar, controlar e melhorar um processo de ciclo de vida de software; 
+* Recursos Humanos: prover e manter recursos humanos adequados mantendo as suas capacitações consistentes com o negócio. 
+ 
+==== Processos de Reúso de Software ====
+São os processos específicos no desenvolvimento de software, processos estes da atualização da ISO/IEC 12207 - 2008.
+* Gestão de Ativos: gerenciar a vida dos ativos (reusáveis) desde a concepção até a desativação;
+* Gestão de Programa de Reúso: planejar, estabelecer, controlar, monitorar os programas de reúso;
+* Engenharia de Domínio: desenvolver e manter modelos, arquiteturas e ativos deste domínio.
+
+=== Processos de Adaptação ===
+Definem as atividades básicas necessárias para executar as adaptações.
+
+Os processos são adaptáveis a:
+* Projeto;
+* Organização;
+* Cultura;
+* Modelo de ciclo de vida, métodos e técnicas, e linguagens.
+Atividades do Desenvolvimento
+Algumas atividades importantes para o desenvolvimento de software serão descritas a seguir. São elas:
+
+* Elicitação de requisitos; 
+* Análise dos requisitos do software; 
+* Projeto da arquitetura do software; 
+* Projeto detalhado do software; 
+* Implementação; 
+* Codificação e testes do software; 
+* Integração do software; 
+* Teste de qualificação do software; 
+* Instalação do software; 
+* Testagem e aprovação do software.
+Elas foram descritas com base na norma ISO/IEC 12207.
+
+=== Elicitação dos requisitos ===
+A elicitação dos requisitos consiste em entender os requisitos e solicitações do sistema; obter e definir os requisitos e solicitações do cliente através de sua solicitação direta ou através de outras entradas como revisão da proposta de negócio, objetivos operacionais, ambiente de hardware e outros documentos.
+
+É imprescindível entender as expectativas do cliente e assegurar que tanto o cliente quanto o fornecedor entendam os requisitos da mesma forma. Isso pode ser feito através do processo de apoio "Revisão Conjunta" descrito na norma ISO/IEC 12207. É necessário acordar os requisitos e obter um acordo entre as equipes que desenvolverão o trabalho em relação aos requisitos do cliente.
+
+É importante gerenciar todas as mudanças feitas nos requisitos do cliente em relação à linha-base definida assegurando que o resultado de mudanças tecnológicas e de necessidades do cliente são identificados e os impactos de introdução dessas mudanças são avaliados.
+
+=== Análise dos requisitos do sistema ===
+Após a elicitação, segue para a especificação dos requisitos do sistema. Esta especificação deve descrever:
+
+* Funções e capacidades do sistema; 
+* Requisitos de negócio, organizacionais e de usuários; 
+* Requisitos de proteção, de segurança, de engenharia de fatores humanos (ergonomia), de interface, de operações e de manutenção; 
+* Restrições de projeto e requisitos de qualificação.
+
+Os requisitos precisam ser avaliados. Por isso, para formalizar e facilitar a avaliação, os critérios listados a seguir devem ser seguidos:
+
+* Rastreabilidade com os requisitos do cliente e necessidades de aquisição; 
+* Consistência com as necessidades de aquisição e com a elicitação dos requisitos; 
+* Testabilidade; 
+* Viabilidade do projeto da arquitetura do sistema; 
+* Viabilidade da operação e manutenção.
+
+Após a avaliação é importante estabelecer mecanismos de comunicação para disseminar os requisitos do sistema e suas atualizações para todas as partes interessadas.
+
+=== Projeto da arquitetura do sistema ===
+Com os requisitos elaborados e validados, pode-se estabelecer uma arquitetura de alto nível para o sistema. A arquitetura deve identificar itens de hardware, software e operações manuais. Após a arquitetura ser estabelecida, é necessário avaliá-la, considerando os critérios listados a seguir:
+
+* Rastreabilidade para os requisitos do sistema; 
+* Consistência com os requisitos do sistema; 
+* Adequação dos métodos e padrões de projeto utilizados; 
+* Viabilidade dos itens de software atenderem seus requisitos alocados; 
+* Viabilidade da operação e da manutenção.
+
+=== Análise dos requisitos do software ===
+Para garantir a qualidade do produto entregue, as características de qualidade descritas a seguir devem ser observadas nos requisitos de software:
+
+* Especificações funcionais e de capacidade, incluindo desempenho, características físicas e condições do ambiente sob o qual o item de software será executado; 
+* Interfaces externas ao item de software; 
+* Requisitos de qualificação; 
+* Especificações de proteção, incluindo aquelas relacionadas aos métodos de operação e manutenção, influências do ambiente e danos pessoais; 
+* Especificações de segurança, incluindo aquelas relacionadas com o comprometimento de informações sigilosas; 
+* Especificações de engenharia de fatores humanos (ergonomia), incluindo aquelas relacionadas com operações manuais, interações entre homem-máquina, restrições a pessoal e áreas que necessitam de maior atenção humana, que são sensíveis a erros humanos e treinamento; 
+* Definição de dados e requisitos de bases de dados; 
+* Requisitos de instalação e aceitação do produto de software entregue nos locais de operação e manutenção; 
+* Documentação do usuário; 
+* Requisitos do usuário para execução e operação; 
+* Requisitos do usuário para manutenção.
+
+Após a análise de requisitos de software é necessário fazer a avaliação desses requisitos considerando os critérios listados a seguir: 
+* Rastreabilidade para os requisitos do sistema e projeto do sistema; 
+* Consistência externa com os requisitos do sistema; 
+* Consistência interna; 
+* Testabilidade; 
+* Viabilidade do projeto do software; 
+* Viabilidade da operação e manutenção.
+
+Pode-se conduzir uma ou mais revisões conjuntas e estabelecer as baselines.
+
+=== Projeto da arquitetura do software ===
+O projeto de arquitetura de software busca transformar os requisitos em uma arquitetura que descreve sua estrutura de alto nível e identifica os componentes de software. As versões preliminares da documentação do usuário, dos requisitos preliminares e de testes devem ser garantidas e documentadas. O cronograma para a Integração do Software deve ser criado. A avaliação da arquitetura do item de software e os projetos de interface e base de dados, considerando os critérios listados a seguir:
+
+* Rastreabilidade para os requisitos do item de software; 
+* Consistência externa com os requisitos do item de software; 
+* Consistência interna entre os componentes de software; 
+* Adequação dos métodos e padrões de projeto utilizados; 
+* Viabilidade do projeto detalhado; 
+* Viabilidade da operação e manutenção.
+
+Pode-se conduzir uma ou mais revisões conjuntas e estabelecer as baselines.
+
+=== Projeto detalhado do software ===
+Após o projeto de arquitetura, desenvolve-se um projeto detalhado de software para cada componente do software. Os componentes de software devem ser refinados em níveis mais baixos, contendo unidades de software que possam ser codificadas, compiladas e testadas. O projeto detalhado das interfaces deve permitir a codificação sem a necessidade de informação adicional. Durante o detalhamento de software, se for necessário, deve ser feita a atualização da documentação do usuário. É importante definir e documentar os requisitos de teste e o cronograma para testar unidades de software.
+
+Após detalhamento do projeto de software é necessário fazer a avaliação deste detalhamento, considerando os critérios listados a seguir:
+
+* Rastreabilidade para os requisitos do item de software; 
+* Consistência externa com o projeto da arquitetura; 
+* Consistência interna entre os componentes e unidades de software; 
+* Adequação dos métodos e padrões de projeto utilizados; 
+* Viabilidade dos testes; 
+* Viabilidade da operação e manutenção.
+
+Pode-se conduzir uma ou mais revisões conjuntas e estabelecer as baselines.
+
+=== Implementação ===
+A implementação consiste na definição ou seleção de um modelo de ciclo de vida de software apropriado ao escopo, magnitude e complexidade do projeto e na execução de documentação dos resultados, de acordo com o processo de documentação; colocação dos resultados sob o processo de gerência de configuração; execução do controle de alterações, de acordo com ele; documentação e resolução de não-conformidades e problemas encontrados nos produtos de software e tarefas, de acordo com o processo de resolução de problema; execução dos processos de apoio, conforme especificado no contrato; seleção, adaptação e utilização de padrões, métodos, ferramentas e linguagens de programação de computador; desenvolvimento dos planos para conduzir as atividades do processo de desenvolvimento.
+
+=== Codificação e testes do software ===
+Para finalmente executar a codificação e os testes é necessário desenvolver e documentar cada unidade de software com base em procedimentos a serem definidos. Os testes devem garantir que os requisitos documentados sejam atendidos. Os resultados dos testes devem ser documentados. Durante esta fase, a atualização e documentação do usuário pode ser feita, se necessário. Após a codificação e testes é importante fazer a avaliação do código do software e dos resultados dos testes, considerando os critérios listados a seguir:
+
+* Rastreabilidade para os requisitos e projeto do item de software; 
+* Consistência externa com os requisitos e projeto do item de software; 
+* Consistência interna entre os requisitos da unidade; 
+* Cobertura de teste das unidades; 
+* Adequação dos métodos e padrões de codificação utilizados; 
+* Viabilidade da integração e testes do software; 
+* Viabilidade da operação e manutenção.
+
+Os resultados das avaliações devem ser documentados.
+
+=== Integração do software ===
+Para poder homologar o sistema é necessário desenvolver um plano de integração para integrar as unidades e componentes de software. O plano deve incluir requisitos de teste, procedimentos, dados, responsabilidades e cronograma. Deve-se testar essas agregações à medida que forem sendo integradas, de acordo com o plano de integração. Durante esta fase, a atualização e documentação do usuário pode ser feita, se necessário.
+
+Após a codificação e testes é importante fazer a avaliação do plano de integração, projeto, código, testes, resultados dos testes e a documentação do usuário, considerando os critérios listados:
+
+* Rastreabilidade para os requisitos do sistema; 
+* Consistência externa com os requisitos do sistema; 
+* Consistência interna; 
+* Cobertura de teste dos requisitos do item de software; 
+* Adequação dos métodos e padrões de teste utilizados; 
+* Conformidade com os resultados esperados; 
+* Viabilidade do teste de qualificação do software; 
+* Viabilidade da operação e manutenção.
+
+Pode-se conduzir uma ou mais revisões conjuntas e estabelecer as baselines.
+
+=== Teste de Qualificação do software ===
+Deve-se desenvolver e documentar os requisitos de qualificação de software e elaborar casos de teste (entradas, saídas e critérios de teste) e procedimentos de teste para conduzir o Teste de Qualificação do Software de acordo com os requisitos de qualificação para o item de software. Após a codificação e testes é importante fazer a avaliação do projeto, códigos, testes, resultados dos testes e a documentação dos usuários, considerando os critérios listados a seguir:
+* Cobertura de teste dos requisitos do item de software;
+* Conformidade com os resultados esperados;
+* Viabilidade da integração e testes do sistema, se conduzidos;
+* Viabilidade da operação e manutenção.
+É importante estar preparado para dar apoio às auditorias.
+
+=== Integração do sistema ===
+A integração do sistema faz-se a partir da integração dos itens de configuração de software ao sistema. Após a integração deve-se conduzir ao teste de qualificação do sistema. Após a codificação e testes é importante fazer a avaliação do sistema, considerando os critérios listados a seguir:
+
+* Cobertura de teste dos requisitos do sistema; 
+* Adequação dos métodos e padrões de teste utilizados; 
+* Conformidade com os resultados esperados; 
+* Viabilidade do teste de qualificação do sistema; 
+* Viabilidade da operação e manutenção.
+
+=== Teste de qualificação do sistema ===
+Para garantir a qualidade do produto entregue é importante conduzir o teste de qualificação do sistema e fazer a avaliação do sistema, considerando os critérios listados a seguir:
+
+* Cobertura de teste dos requisitos do sistema; 
+* Conformidade com os resultados esperados; 
+* Viabilidade da operação e manutenção.
+
+É importante estar preparado para dar apoio às auditorias.
+
+=== Instalação do software ===
+Na instalação do software deve-se executar um plano para instalar o produto de software no ambiente alvo, conforme designado no contrato. Deve ser assegurado que o código do software e as bases de dados sejam iniciados, executados e finalizados, conforme especificado no contrato. Os eventos e resultados da instalação devem ser documentados.
+
+=== Apoio à aceitação do software ===
+No apoio à aceitação do software é preciso garantir o apoio à revisão de aceitação do adquirente e testes do produto de software. A revisão de aceitação e testes deve considerar os resultados de Revisões Conjuntas, Auditorias, Teste de Qualificação do Software e Teste de Qualificação do Sistema (se executado). Conclusão e entrega do produto de software deve ser feita, conforme especificado no contrato e o desenvolvedor deve prover treinamento inicial e contínuo e suporte ao adquirente, conforme especificado no contrato.
+
+
+
+
+
+#12207
+#12207

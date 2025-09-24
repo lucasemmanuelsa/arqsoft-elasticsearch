@@ -1,0 +1,24 @@
+
+Título:Padrão de arquitetura
+Trecho:Padrão de arquitetura
+Introduction
+Um '''padrão de arquitetura''' é uma solução geral e reutilizável para um problema que ocorre com frequência em arquitetura de software dentro de um determinado contexto. Padrões de arquitetura são similares aos padrões de projeto de software, mas possuem um escopo mais amplo. Os padrões de arquitetura abordam vários problemas de engenharia de software, como limitações de desempenho de hardware de computador, alta disponibilidade e minimização de um risco de negócio. Alguns padrões arquiteturais foram implementados dentro de frameworks de software.
+Definição
+Mesmo que um padrão arquitetural transmita uma imagem de um sistema, não é uma arquitetura. Um padrão arquitetural é um conceito que resolve e delineia alguns elementos coesos essenciais de uma arquitetura de software. Inúmeras arquiteturas diferentes podem implementar o mesmo padrão e compartilhar as características relacionadas. Os padrões são geralmente definidos como "estritamente descritos e comumente disponíveis".
+Estilo de arquitetura
+Seguindo arquitetura de construção tradicional, um 'estilo de arquitetura de software' é um método específico de construção, caracterizado pelos recursos que o torna notável".
+
+
+
+
+
+A principal diferença é que um padrão pode ser visto como um solução para um problema, enquanto que um estilo é mais geral e não requer um problema para resolver sua aparência.
+
+
+
+
+
+
+Categoria:Padrão de arquitetura (ciência da computação)
+Categoria:Padrões de projeto de software
+Relevância:83.74

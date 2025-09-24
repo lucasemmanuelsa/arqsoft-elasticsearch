@@ -1,0 +1,18 @@
+
+Título:Giftware
+Trecho:Giftware
+Introduction
+A '''licença Giftware''' é uma licença permissiva que permite fazer qualquer coisa com o software sob essa licença. O software é fornecido para os usuários como um dom, e eles são incentivados a fazer uma doação de retorno para a comunidade de desenvolvedores, como a apresentação de um relatório de bug útil ou liberar um programa como software livre.
+Softwares sob licença Giftware
+Allegro (versão 4)
+Ver também
+Licença zlib
+Links externos
+*  Descrição da licença Giftware da página da Biblioteca Allegro (em inglês)
+
+
+
+
+ 
+Categoria:Distribuição de programas de computador
+Relevância:56.24

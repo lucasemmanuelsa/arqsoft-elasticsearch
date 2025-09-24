@@ -1,5 +1,6 @@
 import json
 from tqdm import tqdm
+import psycopg2
 
 def load_wikipedia(jsonl_path, MAX_LEN_ARTIGOS=None):
     data = []
@@ -26,3 +27,14 @@ def load_wikipedia(jsonl_path, MAX_LEN_ARTIGOS=None):
 
     print(f"Total de artigos: {len(data)}")
     return data
+
+def starting_connection():
+    conn = psycopg2.connect(
+        host="localhost",      # ou o nome do serviço no docker-compose se estiver em outra rede
+        port=5432,
+        database="arqsoft",
+        user="user",
+        password="password"
+    )
+    cur = conn.cursor()
+    return conn, cur

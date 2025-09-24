@@ -1,0 +1,23 @@
+
+Título:Projeto de software
+Trecho:Projeto de software
+Introduction
+'''Design de Software''' (do inglês ''Software design'') é a parte da engenharia de software que se encarrega de fazer todo o planejamento anterior ao desenvolvimento, incluindo a definição da arquitetura do software, e transformar tudo em um documento ou conjunto de documentos capazes de serem interpretados diretamente pelo programador.
+
+Para atingir este objetivo, o projetista deve mapear as estruturas e funcionalidades identificadas na análise de requerimentos dentro do contexto e das restrições da arquitetura, de forma a tornar possível a construção do software. Ao longo do tempo e nos diversos processos de software existentes, várias ferramentas foram idealizadas para facilitar e atingir este objetivo:
+
+* Design por contrato
+* Model Driven Architecture (MDA) e Model Driven Design (MDD)
+* Design Patterns
+* Refatoração
+
+entre outras.
+
+
+
+
+
+
+
+Categoria:Engenharia de software
+Relevância:19.08
